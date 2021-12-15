@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    users
+  </title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
+  <!-- CSS Files -->
+
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/mdb5/3.10.0/compiled.min.css">
+
+  <!-- CSS Files -->
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/paper-dashboard.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+
+
+</head>
+
+<body onload="ponerNombre()">
+
+  <!-- <div class="wrapper "> -->
+  <div class="sidebar" data-color="white" data-active-color="danger">
+    <div class="logo">
+      <a href="/Inicio" class="simple-text logo-normal">
+        <div class="logo-image-big">
+          <img src="./assets/img/sailor.png">
+        </div>
+      </a>
+    </div>
+
+
+    <div class="sidebar-wrapper">
+      <ul class="nav">
+        <li >
+          <a href="./MyProfileAdmin.html">
+            <i class="nc-icon nc-touch-id"></i> 
+            <p>MY PROFILE</p>
+          </a>
+        </li>
+        <li>
+          <a href="./inicio.html">
+            <i class="nc-icon nc-bank"></i>
+            <p>INICIO</p>
+          </a>
+        </li>
+        <li>
+          <a href="./Products.html">
+            <i class="nc-icon nc-cart-simple"></i>
+            <p>PRODUCTS</p>
+          </a>
+        </li>
+        <li class="active ">
+          <a href="./Users.html">
+            <i class="nc-icon nc-single-02"></i>
+            <p>USERS</p>
+          </a>
+        </li>
+        <li>
+          <a href="./Logout.html">
+            <i class="nc-icon nc-button-power"></i>
+            <p>LOGOUT</p>
+          </a>
+        </li>
+        <!-- nc-time-alarm -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-panel" style="height: auto !important;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+      <div class="container-fluid">
+
+
+        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+          <ul class="navbar-nav">
+
+            <li class="nav-item btn-rotate dropdown">
+              <span>Bienvenid@
+                <span id=welcome> </span>
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <div class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="container">
+                <section>
+                  <div class="row">
+                    <div class="costume-form col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="costume-form">
+
+                      <div class="row">
+                        <div class="col-xs-3">
+                          <button data-toggle="modal" data-target="#Mymodal" class="btn btn-primary"
+                            style="background-color: #ADAA03; border-color: #ADAA03; color: black; font-weight: 900;">
+                            CREATE USER
+                          </button>
+                        </div>
+                      </div>
+
+
+                      <!-- Modal crear -->
+                      <div class="modal fade" id="Mymodal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                CREATE USER
+                              </h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div id="form" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <form action="" method="" class="was-validated" data-toggle="validator">
+                                  <div class="row">
+                                    <div class="responsive">
+                                      <div id="form" class="col-12 col-sm-12	col-md-12 col-lg-12	col-xl-12">
+                                        <div class="form-row">
+                                          <!-- <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>ID</b></label>
+                                            <input type="number" class="form-control is-valid" id="idUser" maxlength="2"
+                                              placeholder="Type user id " minlength="1" onload="" required>
+                                          </div> -->
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>IDENTIFICATION</b></label>
+                                            <input type="text" class="form-control is-valid" id="identificationUser"
+                                              placeholder="Type user identification" onchange="validateIdentificacion()"
+                                              required>
+                                          </div>
+
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>NAME</b></label>
+                                            <input type="text" class="form-control is-valid" id="nameUser"
+                                              maxlength="80" placeholder="Type user name" minlength="1"
+                                              onchange="validateName()" required>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>ADDRESS</b></label>
+                                            <input type="text" class="form-control is-valid" id="addressUser"
+                                              maxlength="30" placeholder="Type user address" minlength="1"
+                                              onchange="validateAddress()" required>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>CELLPHONE</b></label>
+                                            <input type="text" class="form-control is-valid" id="cellphoneUser"
+                                              maxlength="10" placeholder="Type user cellphone" minlength="1"
+                                              onchange="validateCellPhone()" required>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>EMAIL</b></label>
+                                            <input type="email" class="form-control is-valid" id="emailUser"
+                                              maxlength="50" placeholder="Type user email" minlength="1"
+                                              onchange="ValidateEmail()" required>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>PASSWORD</b></label>
+                                            <input type="password" class="form-control is-valid" id="passwordUser"
+                                              maxlength="50" placeholder="Type user password" minlength="1"
+                                              onchange="validatePassword()" required>
+                                          </div>
+
+                                          <div class="input-group form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+
+                                            <select class="form-control" name="zoneUser" id="zoneUser" required
+                                              style="height: auto">
+                                              <option value="" selected>
+                                                Select a zone
+                                              </option>
+                                              <option value="COMUNA_1_NORTE">
+                                                COMUNA1 NORTE
+                                              </option>
+                                              <option value="COMUNA_2_NORTORIENTAL">
+                                                COMUNA 2 NORTORIENTAL
+                                              </option>
+                                              <option value="COMUNA_3_SAN_FRANCISCO"> COMUNA 3 SAN FRANCISCO</option>
+                                              <option value="COMUNA_4_OCCIDENTAL">
+                                                COMUNA 4 OCCIENTAL
+                                              </option>
+                                              <option value="COMUNA_5_GARCIA_ROVIRA">
+                                                COMUNA 5 GARCIA ROVIRA
+                                              </option>
+                                              <option value="COMUNA_6_LA_CONCORDIA">
+                                                COMUNA 6 LA CONCORDIA
+                                              </option>
+                                              <option value="COMUNA_7_LA_CIUDADELA">
+                                                COMUNA 7 LA CIUDADELA
+                                              </option>
+                                              <option value="COMUNA_8_SUR_OCCIDENTE">
+                                                COMUNA 8 SUR OCCIDENTE
+                                              </option>
+                                              <option value="COMUNA_9_LA_PEDREGOSA">
+                                                COMUNA 9 LA PEDREGOSA
+                                              </option>
+                                              <option value="COMUNA_10_PROVENZA">
+                                                COMUNA 10 PROVENZA
+                                              </option>
+                                              <option value="COMUNA_11_SUR">
+                                                COMUNA 11 SUR
+                                              </option>
+                                              <option value="COMUNA_12_CABECERA_DEL_LLANO">
+                                                COMUNA 12 CABECERA DEL LLANO
+                                              </option>
+                                              <option value="COMUNA_13_ORIENTAL">
+                                                COMUNA 13 ORIENTAL
+                                              </option>
+                                              <option value="COMUNA_14_MORRORICO">
+                                                COMUNA 14 MORRORICO
+                                              </option>
+                                              <option value="COMUNA_15_CENTRO">
+                                                COMUNA 15 CENTRO
+                                              </option>
+                                              <option value="COMUNA_16_LAGOS_DEL_CACIQUE">
+                                                COMUNA 16 LAGOS DEL CACIQUE
+                                              </option>
+                                              <option value="COMUNA_17_MUTIS">
+                                                COMUNA 17 MUTIS
+                                              </option>
+                                            </select>
+                                          </div>
+
+                                          <div class="input-group form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+
+                                            <select class="form-control" name="typeUser" id="typeUser" required
+                                              style="height: auto">
+                                              <option value="" selected>
+                                                Select a type
+                                              </option>
+                                              <option value="ADM">
+                                                ADM
+                                              </option>
+                                              <option value="COORS">
+                                                COORS
+                                              </option>
+                                              <option value="ASE">ASE</option>
+                                            </select>
+                                          </div>
+
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                  Close
+                                </button>
+                                <button type="button" style="background-color: #ADAA03; color: black;"
+                                  onclick="createUser()" class="btn btn-finish">
+                                  Create user
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Modal crear -->
+
+                      <!-- Modal UPDATE -->
+                      <div class="modal fade" id="MymodalUpdate" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                UPDATE USER
+                              </h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div id="form" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <form action="" method="" class="was-validated" data-toggle="validator">
+                                  <div class="row">
+                                    <div class="responsive">
+                                      <div id="form" class="col-12 col-sm-12	col-md-12 col-lg-12	col-xl-12">
+                                        <div class="form-row">
+                                          <!-- <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>ID</b></label>
+                                            <input type="number" class="form-control is-valid" id="idUserU"
+                                              maxlength="2" placeholder="Type user id " minlength="1" onload=""
+                                              readonly>
+                                          </div> -->
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>IDENTIFICATION</b></label>
+                                            <input type="text" class="form-control is-valid" id="identificationUserU"
+                                              maxlength="10" placeholder="Type user identification" minlength="1"
+                                              onchange="validateIdentificacionU()" required>
+                                          </div>
+
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>NAME</b></label>
+                                            <input type="text" class="form-control is-valid" id="nameUserU"
+                                              maxlength="80" placeholder="Type user name" minlength="1"
+                                              onchange="validateNameU()" required>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>ADDRESS</b></label>
+                                            <input type="text" class="form-control is-valid" id="addressUserU"
+                                              maxlength="30" placeholder="Type user address" minlength="1"
+                                              onchange="validateAddressU()" required>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>CELLPHONE</b></label>
+                                            <input type="text" class="form-control is-valid" id="cellphoneUserU"
+                                              maxlength="10" placeholder="Type user cellphone" minlength="1"
+                                              onchange="validateCellPhoneU()" required>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>EMAIL</b></label>
+                                            <input type="email" class="form-control is-valid" id="emailUserU"
+                                              maxlength="50" placeholder="Type user email" minlength="1"
+                                              onchange="ValidateEmailU()" required>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>PASSWORD</b></label>
+                                            <input type="password" class="form-control is-valid" id="passwordUserU"
+                                              maxlength="50" placeholder="Type user password" minlength="1"
+                                              onchange="validatePasswordU()" required>
+                                          </div>
+
+                                          <div class="input-group form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+
+                                            <select class="form-control" name="zoneUserU" id="zoneUserU" required
+                                              style="height: auto">
+                                              <option value="" selected>
+                                                Select a zone
+                                              </option>
+                                              <option value="COMUNA_1_NORTE">
+                                                COMUNA1 NORTE
+                                              </option>
+                                              <option value="COMUNA_2_NORTORIENTAL">
+                                                COMUNA 2 NORTORIENTAL
+                                              </option>
+                                              <option value="COMUNA_3_SAN_FRANCISCO"> COMUNA 3 SAN FRANCISCO</option>
+                                              <option value="COMUNA_4_OCCIDENTAL">
+                                                COMUNA 4 OCCIENTAL
+                                              </option>
+                                              <option value="COMUNA_5_GARCIA_ROVIRA">
+                                                COMUNA 5 GARCIA ROVIRA
+                                              </option>
+                                              <option value="COMUNA_6_LA_CONCORDIA">
+                                                COMUNA 6 LA CONCORDIA
+                                              </option>
+                                              <option value="COMUNA_7_LA_CIUDADELA">
+                                                COMUNA 7 LA CIUDADELA
+                                              </option>
+                                              <option value="COMUNA_8_SUR_OCCIDENTE">
+                                                COMUNA 8 SUR OCCIDENTE
+                                              </option>
+                                              <option value="COMUNA_9_LA_PEDREGOSA">
+                                                COMUNA 9 LA PEDREGOSA
+                                              </option>
+                                              <option value="COMUNA_10_PROVENZA">
+                                                COMUNA 10 PROVENZA
+                                              </option>
+                                              <option value="COMUNA_11_SUR">
+                                                COMUNA 11 SUR
+                                              </option>
+                                              <option value="COMUNA_12_CABECERA_DEL_LLANO">
+                                                COMUNA 12 CABECERA DEL LLANO
+                                              </option>
+                                              <option value="COMUNA_13_ORIENTAL">
+                                                COMUNA 13 ORIENTAL
+                                              </option>
+                                              <option value="COMUNA_14_MORRORICO">
+                                                COMUNA 14 MORRORICO
+                                              </option>
+                                              <option value="COMUNA_15_CENTRO">
+                                                COMUNA 15 CENTRO
+                                              </option>
+                                              <option value="COMUNA_16_LAGOS_DEL_CACIQUE">
+                                                COMUNA 16 LAGOS DEL CACIQUE
+                                              </option>
+                                              <option value="COMUNA_17_MUTIS">
+                                                COMUNA 17 MUTIS
+                                              </option>
+                                            </select>
+                                          </div>
+
+                                          <div class="input-group form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+
+                                            <select class="form-control" name="typeUserU" id="typeUserU" required
+                                              style="height: auto">
+                                              <option value="" selected>
+                                                Select a type
+                                              </option>
+                                              <option value="ADM">
+                                                ADM
+                                              </option>
+                                              <option value="COORD">
+                                                COORD
+                                              </option>
+                                              <option value="ASE">ASE</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                  Close
+                                </button>
+                                <button type="button" style="background-color: #ADAA03; color: black;"
+                                  onclick="updateUser()" class="btn btn-finish">
+                                  Updaye user
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Modal Update -->
+
+                      <div id="resultUsers" class="col-12 col-sm-12	col-md-12 col-lg-12	col-xl-12">
+                      </div>
+
+                      <br><br><br><br>
+
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <!-- </div> -->
+
+
+            <script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+
+            <script
+              src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+              integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+              crossorigin="anonymous">
+              </script>
+
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+              integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+              crossorigin="anonymous">
+              </script>
+
+
+            <!-- <script src="assets/js/bootstrap.min.js" type="text/javascript"></script> -->
+            <script src="assets/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+            <script src="assets/js/gsdk-bootstrap-wizard.js"></script>
+            <script src="assets/js/jquery.validate.min.js"></script>
+            <!-- Bootstrap Date-Picker Plugin -->
+
+
+
+            <script src="../assets/js/Custome/ContadorCaracteres.js"></script>
+            <script src="../assets/js/Custome/Users.js"></script>
+            <script src="../assets/js/Custome/Validator.js"></script>
+
+            <script src="assets/js/Custome/nombre.js"></script>
+
+
+            <script type="text/javascript">
+              window.onload = autoInicioUsers();
+            </script>
+
+
+            <script type="text/javascript">
+              window.onload = ponerNombre();
+            </script>
+
+</body>
+
+</html>
